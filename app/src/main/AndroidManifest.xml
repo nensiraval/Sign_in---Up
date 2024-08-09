@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SignInup"
         tools:targetApi="31">
         <activity
+            android:name=".Mydatabase"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2up"
             android:exported="false" />
         <activity

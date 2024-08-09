@@ -37,6 +37,7 @@
        app:boxCornerRadiusBottomEnd="20sp">
        <com.google.android.material.textfield.TextInputEditText
            android:layout_width="match_parent"
+           android:id="@+id/username"
            android:layout_height="wrap_content"
            android:textColor="#000"/>
    </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +61,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:id="@+id/password"
             android:layout_height="wrap_content"
             android:textColor="#000"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,6 +76,7 @@
         android:layout_marginTop="10dp"/>
 
     <Button
+        android:id="@+id/loginuser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#321C1C"
