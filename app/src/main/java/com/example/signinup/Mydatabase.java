@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.sql.DriverManager;
+
 public class Mydatabase extends SQLiteOpenHelper {
 
     public  Mydatabase(Context context)
@@ -30,7 +32,10 @@ public class Mydatabase extends SQLiteOpenHelper {
     public Boolean insertdata(String username, String email, String pass)
     {
         try {
+
             String insert = "INSERT INTO usertable(username, email, password) VALUES ('"+username+"','"+email+"','"+pass+"')";
+            SQLiteDatabase db = this.getWritableDatabase();
+            db.execSQL(insert, new String[]{username, email, pass});
 //            String insert = "INSERT INTO user(username, email, password) VALUES ('"+"nency"+"','"+"nency@gmail.com"+"', '""+"nency123"+"')";
             getWritableDatabase().execSQL(insert);
 
@@ -52,10 +57,12 @@ public class Mydatabase extends SQLiteOpenHelper {
     public Cursor userlogin(String user, String pass)
     {
      //   String select = "SELECT * FROM usertable";
-      //  String select = "SELECT password FROM usertable";
+     //  String select = "SELECT password FROM usertable";
         String select = "SELECT * FROM usertable WHERE username = '"+user+"'AND password = '"+pass+"'";
-
-        Cursor cr = getReadableDatabase().rawQuery(select, null);
+        SQLiteDatabase db = this.getReadableDatabase();
+//        Log.e("==", "userlogin: ",  );
+        Cursor cr = db.rawQuery(select, null);
+      //  Cursor cr = getReadableDatabase().rawQuery(select, null);
         return cr;
     }
 }

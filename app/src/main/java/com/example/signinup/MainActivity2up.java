@@ -30,6 +30,7 @@ public class MainActivity2up extends AppCompatActivity {
         user = findViewById(R.id.user);
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
+        compss = findViewById(R.id.compss);
 
         Mydatabase db = new Mydatabase(MainActivity2up.this);
 
