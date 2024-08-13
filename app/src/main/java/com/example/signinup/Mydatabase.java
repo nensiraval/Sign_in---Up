@@ -24,7 +24,6 @@ public class Mydatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String table = "CREATE TABLE usertable (username text unique, email text, password text)";
-//        String table = "CREATE TABLE use(usernamr text, email text, password text)";
 //                        CREATE TABLE table_name(column_name datatype constraints, , ,)
         db.execSQL(table);
     }
@@ -35,7 +34,6 @@ public class Mydatabase extends SQLiteOpenHelper {
 
             String insert = "INSERT INTO usertable(username, email, password) VALUES ('"+username+"','"+email+"','"+pass+"')";
             SQLiteDatabase db = this.getWritableDatabase();
-            db.execSQL(insert, new String[]{username, email, pass});
 //            String insert = "INSERT INTO user(username, email, password) VALUES ('"+"nency"+"','"+"nency@gmail.com"+"', '""+"nency123"+"')";
             getWritableDatabase().execSQL(insert);
 
@@ -51,18 +49,14 @@ public class Mydatabase extends SQLiteOpenHelper {
         }
     }
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
-    {
-    }
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){}
     public Cursor userlogin(String user, String pass)
     {
      //   String select = "SELECT * FROM usertable";
      //  String select = "SELECT password FROM usertable";
         String select = "SELECT * FROM usertable WHERE username = '"+user+"'AND password = '"+pass+"'";
-        SQLiteDatabase db = this.getReadableDatabase();
-//        Log.e("==", "userlogin: ",  );
-        Cursor cr = db.rawQuery(select, null);
-      //  Cursor cr = getReadableDatabase().rawQuery(select, null);
+
+        Cursor cr = getReadableDatabase().rawQuery(select,null);
         return cr;
     }
 }

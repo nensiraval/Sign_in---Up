@@ -16,9 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity2up extends AppCompatActivity {
 
-    TextView login;
-    Button enter;
-    TextInputEditText user, email, pass, compss;
+    TextView login; Button enter; TextInputEditText user, email, pass, compss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

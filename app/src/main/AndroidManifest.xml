@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SignInup"
         tools:targetApi="31">
         <activity
+            android:name=".contact"
+            android:exported="false" />
+        <activity
             android:name=".homepage"
             android:exported="false" />
         <activity
