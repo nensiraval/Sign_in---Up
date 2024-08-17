@@ -4,15 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Bundle;
 import android.util.Log;
-
-import androidx.activity.EdgeToEdge;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.sql.DriverManager;
 
 public class Mydatabase extends SQLiteOpenHelper {
 
@@ -23,10 +15,27 @@ public class Mydatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table = "CREATE TABLE usertable (username text unique, email text, password text)";
+        String table = "CREATE TABLE usertable (id integer primary key autoincrement,username text unique, email text, password text)";
 //                        CREATE TABLE table_name(column_name datatype constraints, , ,)
         db.execSQL(table);
+        //contanct table
+        String contact = "CREATE TABLE contact (id integer primary key autoincrement, userid integer, fname text, lname text, phone text, mael text)";
+        db.execSQL(contact);
     }
+
+        public Boolean addcontact(int userid, String fname, String lname, String phone, String mael)
+        {
+            try
+            {
+                String insrt = "INSERT INTO contact (userid, fname, lname, phone, mael) VALUES ("+userid+", '"+fname+"', '"+lname+"', '"+phone+"', '"+mael+"')";
+                getWritableDatabase().execSQL(insrt);
+                return true;
+            }catch (Exception e)
+            {
+                return false;
+            }
+        }
+
 
     public Boolean insertdata(String username, String email, String pass)
     {

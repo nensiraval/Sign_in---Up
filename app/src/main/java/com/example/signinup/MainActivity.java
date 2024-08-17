@@ -1,7 +1,6 @@
 package com.example.signinup;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -38,22 +36,27 @@ public class MainActivity extends AppCompatActivity {
 
                 while (data.moveToNext())
                 {
-                    Log.e("==n", "name: "+data.getString(0));
-                    Log.e("==n", "email: "+data.getString(1));
-                    Log.e("==n", "pass: "+data.getString(2));
+                    Log.e("==n", "id: "+data.getString(0));
+                    Log.e("==n", "name: "+data.getString(1));
+                    Log.e("==n", "email: "+data.getString(2));
+                    Log.e("==n", "pass: "+data.getString(3));
 
-                    startActivity(new Intent(MainActivity.this, homepage.class).putExtra("name",data.getString(0))
-                            .putExtra("email",data.getString(1)));
-                    finish();
+                    startActivity(new Intent(MainActivity.this, Homepage.class).putExtra("id",data.getString(0))
+                            .putExtra("name",data.getString(1)));
+
+//                    startActivity(new Intent(MainActivity.this, homepage.class).putExtra("name",data.getString(0))
+//                            .putExtra("email",data.getString(1)));
                 }
             }
         });
-        signup.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 startActivity(new Intent(MainActivity.this, MainActivity2up.class));
                 finish();
             }
-        } );
+        });
     }
 }
