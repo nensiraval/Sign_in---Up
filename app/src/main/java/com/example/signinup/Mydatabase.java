@@ -47,7 +47,6 @@ public class Mydatabase extends SQLiteOpenHelper {
             getWritableDatabase().execSQL(insert);
 
             return  true;
-
             //INSERT INTO table_name(column_name, , ,)VALUES (value,,,)
             //String value ''
         }
@@ -61,11 +60,18 @@ public class Mydatabase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){}
     public Cursor userlogin(String user, String pass)
     {
-     //   String select = "SELECT * FROM usertable";
      //  String select = "SELECT password FROM usertable";
         String select = "SELECT * FROM usertable WHERE username = '"+user+"'AND password = '"+pass+"'";
 
         Cursor cr = getReadableDatabase().rawQuery(select,null);
         return cr;
     }
+
+//    public Cursor contact(String name)
+//    {
+//        String cnselect = "SELECT * FROM contact WHERE name = '"+name+"'";
+//
+//        Cursor ccr = getReadableDatabase().rawQuery(cnselect,null);
+//        return ccr;
+//    }
 }
