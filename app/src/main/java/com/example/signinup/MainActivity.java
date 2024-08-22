@@ -33,24 +33,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
               {
-                  if (!password.equals(""))
-                  {
-                      Toast.makeText(MainActivity.this, "Password is wrong", Toast.LENGTH_SHORT).show();
-                  } else
-                  {
-                      Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                      finish();
-                  }
+//                  if (!password.equals(""))
+//                  {
+//                      Toast.makeText(MainActivity.this, "Password is wrong", Toast.LENGTH_SHORT).show();
+//                  } else
+//                  {
+//                      Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+//                      finish();
+//                  }
                 Cursor data =  db.userlogin(username.getText().toString(), password.getText().toString());
 
                 while (data.moveToNext())
                 {
-                    Log.e("==n", "id: "+data.getString(0));
+                    Log.e("==n", "id: "+data.getInt(0));
                     Log.e("==n", "name: "+data.getString(1));
                     Log.e("==n", "email: "+data.getString(2));
                     Log.e("==n", "pass: "+data.getString(3));
 
-                    startActivity(new Intent(MainActivity.this, Homepage.class).putExtra("id",data.getString(0))
+                    startActivity(new Intent(MainActivity.this, Homepage.class).putExtra("id",data.getInt(0))
                             .putExtra("name",data.getString(1)));
                 }
             }

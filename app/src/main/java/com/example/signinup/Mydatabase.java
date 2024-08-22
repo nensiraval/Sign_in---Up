@@ -67,11 +67,10 @@ public class Mydatabase extends SQLiteOpenHelper {
         return cr;
     }
 
-//    public Cursor contact(String name)
-//    {
-//        String cnselect = "SELECT * FROM contact WHERE name = '"+name+"'";
-//
-//        Cursor ccr = getReadableDatabase().rawQuery(cnselect,null);
-//        return ccr;
-//    }
+    public Cursor contact(int userid)
+    {
+        String cnselect = "SELECT * FROM contact WHERE userid = "+userid;
+
+       return getReadableDatabase().rawQuery(cnselect,null);
+    }
 }

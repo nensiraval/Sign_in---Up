@@ -9,15 +9,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity2up">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#040305"
-        android:gravity="center"
-        android:id="@+id/name"
-        android:layout_margin="30dp"
-        android:textSize="36dp"
-        android:textStyle="bold"/>
 
     <ListView
         android:id="@+id/number"
