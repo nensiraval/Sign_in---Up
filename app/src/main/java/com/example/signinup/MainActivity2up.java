@@ -40,7 +40,7 @@ public class MainActivity2up extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Boolean n = db.insertdata(user.getText().toString(), email.getText().toString(), pass.getText().toString());
-//
+
 //                if (!pass.equals("correct_password")||compss.equals("Not correct"))
 //                {
 //                    Toast.makeText(MainActivity2up.this, "Login successful!", Toast.LENGTH_SHORT).show();

@@ -15,7 +15,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
     TextView signup;
-    Button loginuser; TextInputEditText password, username;
+    Button loginuser;
+    TextInputEditText password, username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,12 +32,13 @@ public class MainActivity extends AppCompatActivity {
         Mydatabase db = new Mydatabase(MainActivity.this);
         loginuser.setOnClickListener(new View.OnClickListener () {
             @Override
-            public void onClick(View v)
+            public void onClick(View view)
               {
 //                  if (!password.equals(""))
 //                  {
 //                      Toast.makeText(MainActivity.this, "Password is wrong", Toast.LENGTH_SHORT).show();
-//                  } else
+//                  }
+//                  else
 //                  {
 //                      Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
 //                      finish();
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("==n", "name: "+data.getString(1));
                     Log.e("==n", "email: "+data.getString(2));
                     Log.e("==n", "pass: "+data.getString(3));
+
+                    SpaceScreen.edit.putBoolean("status",true);
+                    SpaceScreen.edit.putInt("uid",data.getInt(0));
+                    SpaceScreen.edit.apply();
 
                     startActivity(new Intent(MainActivity.this, Homepage.class).putExtra("id",data.getInt(0))
                             .putExtra("name",data.getString(1)));
