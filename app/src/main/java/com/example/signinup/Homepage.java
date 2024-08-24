@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.window.SplashScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class Homepage extends AppCompatActivity {
-    FloatingActionButton add;  ListView number;
+    FloatingActionButton add,logout;  ListView number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Homepage extends AppCompatActivity {
 
         add = findViewById(R.id.add);
         number = findViewById(R.id.number);
+        logout = findViewById(R.id.logout);
 
         int userid = getIntent().getIntExtra("id",10);
 
@@ -35,6 +37,17 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v)
             {
                 startActivity(new Intent(Homepage.this, Contact.class).putExtra("id", userid));
+                finish();
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SpaceScreen.edit.putBoolean("status",false);
+                SpaceScreen.edit.apply();
+
+                startActivity(new Intent(Homepage.this, SpaceScreen.class));
                 finish();
             }
         });

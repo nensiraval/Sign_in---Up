@@ -30,19 +30,11 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
 
         Mydatabase db = new Mydatabase(MainActivity.this);
+
         loginuser.setOnClickListener(new View.OnClickListener () {
             @Override
             public void onClick(View view)
               {
-//                  if (!password.equals(""))
-//                  {
-//                      Toast.makeText(MainActivity.this, "Password is wrong", Toast.LENGTH_SHORT).show();
-//                  }
-//                  else
-//                  {
-//                      Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-//                      finish();
-//                  }
                 Cursor data =  db.userlogin(username.getText().toString(), password.getText().toString());
 
                 while (data.moveToNext())

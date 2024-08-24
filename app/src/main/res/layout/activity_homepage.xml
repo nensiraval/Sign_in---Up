@@ -10,8 +10,17 @@
     tools:context=".MainActivity2up">
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/logout"
+        android:src="@drawable/logout"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#5B6FDF"/>
     <ListView
         android:id="@+id/number"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
