@@ -121,6 +121,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:id="@+id/phone"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:textColor="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>

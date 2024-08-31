@@ -46,7 +46,6 @@ public class Homepage extends AppCompatActivity {
 
                 SpaceScreen.edit.putBoolean("status",false);
                 SpaceScreen.edit.apply();
-
                 startActivity(new Intent(Homepage.this, SpaceScreen.class));
                 finish();
             }

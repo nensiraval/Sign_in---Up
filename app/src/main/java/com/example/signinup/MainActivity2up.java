@@ -33,8 +33,8 @@ public class MainActivity2up extends AppCompatActivity {
 
         Mydatabase db = new Mydatabase(MainActivity2up.this);
 
-        pass.getText().toString();
-        compss.getText().toString();
+//        pass.getText().toString();
+//        compss.getText().toString();
 
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
