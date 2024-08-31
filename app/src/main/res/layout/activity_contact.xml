@@ -9,14 +9,29 @@
     android:orientation="vertical"
     tools:context=".Contact">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="end">
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
         android:id="@+id/add"
+        android:layout_marginTop="40dp"
         android:src="@drawable/photo"
         android:backgroundTint="#6E7173"/>
 
@@ -25,14 +40,15 @@
         android:layout_height="wrap_content"
         android:text="Add picture"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:textColor="#2196F3"
-        android:textStyle="bold"/>
+        android:textStyle ="bold"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="25dp"
         android:hint="First name"
         android:textColorHint="@color/white"
@@ -57,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="25dp"
         android:hint="Last name"
         android:textColorHint="@color/white"
@@ -77,34 +93,12 @@
             android:textColor="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="25dp"-->
-<!--        android:layout_marginTop="2dp"-->
-<!--        android:layout_marginRight="25dp"-->
-<!--        android:hint="Company"-->
-<!--        android:textColorHint="@color/white"-->
-<!--        app:boxCornerRadiusBottomStart="10sp"-->
-<!--        app:boxCornerRadiusTopEnd="10sp"-->
-<!--        app:boxCornerRadiusBottomEnd="10sp"-->
-<!--        app:boxCornerRadiusTopStart="10sp"-->
-<!--        app:boxStrokeWidth="2dp"-->
-<!--        app:endIconMode="none"-->
-<!--        app:hintTextColor="@color/white"-->
-<!--        app:boxStrokeColor="#2196F3">-->
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:id="@+id/cm"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textColor="@color/white"/>-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="25dp"
         android:hint="Phone"
         android:textColorHint="@color/white"
@@ -130,7 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="25dp"
         android:hint="Email"
         android:textColorHint="@color/white"
@@ -157,10 +151,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
-        android:layout_margin="10dp"
+        android:layout_margin="100dp"
         android:textSize="25dp"
         android:textColor="@color/white"
-        android:layout_gravity="end"
+        android:layout_gravity="center"
         android:gravity="center"
         android:backgroundTint="#348ED5"
         android:layout_marginEnd="10dp"/>

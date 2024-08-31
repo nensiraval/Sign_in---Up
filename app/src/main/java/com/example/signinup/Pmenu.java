@@ -17,6 +17,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+
+// Try mate PRactice have apde ane main ma add karvanu
 public class Pmenu extends AppCompatActivity {
 
     ImageView imageview;
