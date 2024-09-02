@@ -51,20 +51,23 @@ public class Contact extends AppCompatActivity
                 //1st line no code jo apde bar game tya click kriye to close na thay
                 dialog.setCancelable(false);
                 TextView txt= dialog.findViewById(R.id.txt);
-                Button ys = dialog.findViewById(R.id.ys);
-                Button no = dialog.findViewById(R.id.no);
+                Button close = dialog.findViewById(R.id.close);
+                Button out = dialog.findViewById(R.id.out);
 
-                ys.setOnClickListener(new View.OnClickListener() {
+                out.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        txt.setText("Yes");
+                    public void onClick(View v)
+                    {
+                        dialog.dismiss();
+                        startActivity(new Intent(Contact.this,MainActivity.class));
+                        finish();
                     }
                 });
 
-                no.setOnClickListener(new View.OnClickListener() {
+                close.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dialog.dismiss();
+                        txt.setText("No");
                     }
                 });
                 pmenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -75,8 +78,8 @@ public class Contact extends AppCompatActivity
                             SpaceScreen.edit.putBoolean("status",false);
                             SpaceScreen.edit.apply();
 
-                            startActivity(new Intent(Contact.this,MainActivity.class));
-                            finish();
+//                            startActivity(new Intent(Contact.this,MainActivity.class));
+//                            finish();
                         } else if (item.getItemId() == R.id.stg)
                         {
                             Toast.makeText(Contact.this,"Setting",Toast.LENGTH_SHORT).show();
@@ -92,6 +95,7 @@ public class Contact extends AppCompatActivity
                 });
             }
         });
+
 
         save.setOnClickListener(new View.OnClickListener()
         {
