@@ -9,21 +9,6 @@
     android:orientation="vertical"
     tools:context=".Contact">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_gravity="end">
-
-        <ImageView
-            android:id="@+id/more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/more"
-            android:layout_margin="10dp"/>
-    </RelativeLayout>
-
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,31 +61,6 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="3dp"
         android:layout_marginRight="25dp"
-        android:hint="Last name"
-        android:textColorHint="@color/black"
-        app:boxCornerRadiusBottomStart="10sp"
-        app:boxCornerRadiusTopEnd="10sp"
-        app:boxCornerRadiusBottomEnd="10sp"
-        app:boxCornerRadiusTopStart="10sp"
-        app:boxStrokeWidth="2dp"
-        app:endIconMode="none"
-        app:hintTextColor="@color/black"
-        app:boxStrokeColor="#2196F3">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/lname"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="25dp"
         android:hint="Phone"
         android:textColorHint="@color/black"
         app:boxCornerRadiusBottomStart="10sp"
@@ -118,6 +78,31 @@
             android:layout_width="match_parent"
             android:id="@+id/phone"
             android:inputType="number"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="25dp"
+        android:hint="Last name"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="none"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="#2196F3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/lname"
             android:layout_height="wrap_content"
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>

@@ -9,18 +9,32 @@
     android:orientation="vertical"
     tools:context=".MainActivity2up">
 
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end">-->
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:id="@+id/logout"
-        android:src="@drawable/logout"
-        android:layout_alignParentEnd="true"
-        android:backgroundTint="#5B6FDF"/>
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"/>
+<!--    </RelativeLayout>-->
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:id="@+id/logout"-->
+<!--        android:src="@drawable/logout"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:backgroundTint="#5B6FDF"/>-->
     <ListView
         android:id="@+id/number"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

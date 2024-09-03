@@ -19,15 +19,15 @@ public class Mydatabase extends SQLiteOpenHelper {
 //                        CREATE TABLE table_name(column_name datatype constraints, , ,)
         db.execSQL(table);
         //contanct table
-        String contact = "CREATE TABLE contact (id integer primary key autoincrement, userid integer, fname text, lname text, phone text, mael text)";
+        String contact = "CREATE TABLE contact (id integer primary key autoincrement, userid integer, fname text, phone text, lname text, mael text)";
         db.execSQL(contact);
     }
 
-        public Boolean addcontact(int userid, String fname, String lname, String phone, String mael)
+        public Boolean addcontact(int userid, String fname, String phone, String lname, String mael)
         {
             try
             {
-                String insrt = "INSERT INTO contact (userid, fname, lname, phone, mael) VALUES ("+userid+", '"+fname+"', '"+lname+"', '"+phone+"', '"+mael+"')";
+                String insrt = "INSERT INTO contact (userid, fname, phone, lname, mael) VALUES ("+userid+", '"+fname+"', '"+phone+"', '"+lname+"', '"+mael+"')";
                 getWritableDatabase().execSQL(insrt);
                 return true;
             }catch (Exception e)
