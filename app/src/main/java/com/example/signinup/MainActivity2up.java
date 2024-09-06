@@ -16,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity2up extends AppCompatActivity {
-
     TextView login; Button enter; TextInputEditText user, email, pass, compss;
 
     @Override
@@ -41,13 +40,6 @@ public class MainActivity2up extends AppCompatActivity {
             public void onClick(View v) {
                 Boolean n = db.insertdata(user.getText().toString(), email.getText().toString(), pass.getText().toString());
 
-//                if (!pass.equals("correct_password")||compss.equals("Not correct"))
-//                {
-//                    Toast.makeText(MainActivity2up.this, "Login successful!", Toast.LENGTH_SHORT).show();
-//                } else
-//                {
-//                    Toast.makeText(MainActivity2up.this, "Password is wrong", Toast.LENGTH_SHORT).show();
-//                }
                 if (n == true)
                 {
                     startActivity(new Intent(MainActivity2up.this,MainActivity.class));

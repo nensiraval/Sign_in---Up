@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/flower"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editpaged">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:id="@+id/pic"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/photo"
+        android:backgroundTint="#6AB9EF"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="25dp"
+      android:layout_marginTop="60dp"
+      android:layout_marginRight="25dp"
+      android:hint="First name"
+      android:textColorHint="@color/black"
+      app:boxCornerRadiusBottomStart="10sp"
+      app:boxCornerRadiusTopEnd="10sp"
+      app:boxCornerRadiusBottomEnd="10sp"
+      app:boxCornerRadiusTopStart="10sp"
+      app:boxStrokeWidth="2dp"
+      app:endIconMode="none"
+      app:hintTextColor="@color/black"
+      app:startIconDrawable="@drawable/user"
+      app:startIconTint="@color/black"
+      app:boxStrokeColor="#000">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:id="@+id/ename"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"/>
+  </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp"
+        android:hint="Phone"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="none"
+        app:hintTextColor="@color/black"
+        app:startIconTint="@color/black"
+        app:startIconDrawable="@drawable/telephone"
+        app:boxStrokeColor="#000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/enumber"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/esave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save changing"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/edelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#1D2125"/>
+</LinearLayout>

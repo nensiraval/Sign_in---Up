@@ -5,16 +5,15 @@
     android:title="Logout"/>
 
     <item
-         android:id="@+id/stg"
+        android:id="@+id/dlet"
+        android:title="Delete"/>
+    <item
+        android:id="@+id/stg"
         android:title="Setting"/>
 
     <item
         android:id="@+id/shre"
         android:title="Share"/>
-
-    <item
-        android:id="@+id/dlet"
-        android:title="Delete"/>
 
     <item
         android:id="@+id/sring"

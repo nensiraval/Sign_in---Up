@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -10,9 +11,9 @@
 
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
-        android:src="@drawable/data"/>
+        android:src="@drawable/contact"/>
 
 <!--    main icon -->
 </LinearLayout>

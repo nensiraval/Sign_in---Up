@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     TextView signup;
     Button loginuser;
     TextInputEditText password, username;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
               {
                 Cursor data =  db.userlogin(username.getText().toString(), password.getText().toString());
 
-                while (data.moveToNext())
+                while(data.moveToNext())
                 {
                     Log.e("==n", "id: "+data.getInt(0));
                     Log.e("==n", "name: "+data.getString(1));
