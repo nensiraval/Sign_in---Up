@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Currency;
 
 public class Myadapter extends BaseAdapter {
@@ -37,6 +38,28 @@ public class Myadapter extends BaseAdapter {
             d.setId(cr.getInt(0));
             datalist.add(d);
         }
+
+        //Data sorting
+        ArrayList<String> namelist = new ArrayList<>();
+        for (int i=0; i<datalist.size(); i++)
+        {
+            namelist.add(datalist.get(i).getName());
+        }
+        namelist.sort(Comparator.naturalOrder());
+
+        ArrayList<Modelclass> tmp = new ArrayList<>();
+        for(int i =0; i<datalist.size(); i++)
+        {
+            for (int j =0 ; j<datalist.size(); j++)
+            {
+                if (namelist.get(i) == datalist.get(j).getName())
+                {
+                    tmp.add(datalist.get(j));
+                    break;
+                }
+            }
+        }
+        datalist = tmp;
     }
     @Override
     public int getCount() {

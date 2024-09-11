@@ -97,13 +97,13 @@ public class Homepage extends AppCompatActivity {
                         else if (item.getItemId() == R.id.shre) {
                             Toast.makeText(Homepage.this,"Share",Toast.LENGTH_SHORT).show();
                         }
-                        else if (item.getItemId() == R.id.dlet) {
+                        else if (item.getItemId() == R.id.dlet)
+                        {
                             Toast.makeText(Homepage.this,"Delete",Toast.LENGTH_SHORT).show();
                         }
                         return false;
                     }
                 });
-
             }
         });
 //        logout.setOnClickListener(new View.OnClickListener() {

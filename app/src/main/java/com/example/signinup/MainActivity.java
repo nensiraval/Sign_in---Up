@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         username = findViewById(R.id.username);
 
+
         Mydatabase db = new Mydatabase(MainActivity.this);
 
         loginuser.setOnClickListener(new View.OnClickListener () {

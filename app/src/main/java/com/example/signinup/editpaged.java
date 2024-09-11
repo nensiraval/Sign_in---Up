@@ -52,9 +52,11 @@ public class editpaged extends AppCompatActivity {
             }
         });
 
-        edelete.setOnClickListener(new View.OnClickListener() {
+        edelete.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
 //                Mydatabase db = new Mydatabase(editpaged.this);
 //              //  db.deletedata(ename.getText().toString());
 //                db.deletedata(cid);
@@ -82,10 +84,10 @@ public class editpaged extends AppCompatActivity {
                          finish();
                     }
                 });
-
                 no.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(View v)
+                    {
                         dialog.dismiss();
                     }
                 });
