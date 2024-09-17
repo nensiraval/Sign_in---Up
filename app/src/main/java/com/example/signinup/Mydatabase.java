@@ -67,9 +67,10 @@ public class Mydatabase extends SQLiteOpenHelper {
 
         return getReadableDatabase().rawQuery(cnselect, null);
     }
+
     public void editdata(String newname, String newnum, int contactid) {
         String update = "UPDATE contact SET fname = '" + newname + "', phone = '" + newnum + "' WHERE id = " + contactid;
-      getWritableDatabase().execSQL(update);
+        getWritableDatabase().execSQL(update);
 
     }
     //name deleted
@@ -80,9 +81,9 @@ public class Mydatabase extends SQLiteOpenHelper {
 //    }
 
     //id throw delete
-    public void deletedata(int contactid)
-    {
+    public void deletedata(int contactid) {
         String delete = "DELETE FROM contact  WHERE id = " + contactid;
         getWritableDatabase().execSQL(delete);
     }
+
 }

@@ -20,46 +20,48 @@ public class Myadapter extends BaseAdapter {
     // jyare limited to vadhare data hoi tyare ek j arraylist banavvi
 
     ArrayList<Modelclass> datalist = new ArrayList<>();
-
     Context context;
     int uid;
-    Myadapter (Context context, int uid)
+    Myadapter (Context context, int uid, ArrayList<Modelclass> datalist)
     {
         this.context = context;
         this.uid = uid;
-        Mydatabase db = new Mydatabase(context);
-        Cursor cr = db.contact(uid);
+        this.datalist = datalist;
 
-        while (cr.moveToNext())
-        {
-            Modelclass d = new Modelclass(); //(cr.getString(2),cr.getString(3),cr.getInt(0));
-            d.setName(cr.getString(2));
-            d.setNum(cr.getString(3));
-            d.setId(cr.getInt(0));
-            datalist.add(d);
-        }
-
-        //Data sorting
-        ArrayList<String> namelist = new ArrayList<>();
-        for (int i=0; i<datalist.size(); i++)
-        {
-            namelist.add(datalist.get(i).getName());
-        }
-        namelist.sort(Comparator.naturalOrder());
-
-        ArrayList<Modelclass> tmp = new ArrayList<>();
-        for(int i =0; i<datalist.size(); i++)
-        {
-            for (int j =0 ; j<datalist.size(); j++)
-            {
-                if (namelist.get(i) == datalist.get(j).getName())
-                {
-                    tmp.add(datalist.get(j));
-                    break;
-                }
-            }
-        }
-        datalist = tmp;
+        //jyare search-view ma alphabet joiye tyare j bdho code homepage ma krvo..
+//        Mydatabase db = new Mydatabase(context);
+//        Cursor cr = db.contact(uid);
+//
+//        while (cr.moveToNext())
+//        {
+//            Modelclass d = new Modelclass(); //(cr.getString(2),cr.getString(3),cr.getInt(0));
+//            d.setName(cr.getString(2));
+//            d.setNum(cr.getString(3));
+//            d.setId(cr.getInt(0));
+//            datalist.add(d);
+//        }
+//
+//        //Data sorting
+//        ArrayList<String> namelist = new ArrayList<>();
+//        for (int i=0; i<datalist.size(); i++)
+//        {
+//            namelist.add(datalist.get(i).getName());
+//        }
+//        namelist.sort(Comparator.naturalOrder());
+//
+//        ArrayList<Modelclass> tmp = new ArrayList<>();
+//        for(int i =0; i<datalist.size(); i++)
+//        {
+//            for (int j =0 ; j<datalist.size(); j++)
+//            {
+//                if (namelist.get(i) == datalist.get(j).getName())
+//                {
+//                    tmp.add(datalist.get(j));
+//                    break;
+//                }
+//            }
+//        }
+//        datalist = tmp;
     }
     @Override
     public int getCount() {

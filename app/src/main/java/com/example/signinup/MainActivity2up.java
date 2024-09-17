@@ -1,7 +1,9 @@
 package com.example.signinup;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -9,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -16,8 +19,10 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity2up extends AppCompatActivity {
+
     TextView login; Button enter; TextInputEditText user, email, pass, compss;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +35,12 @@ public class MainActivity2up extends AppCompatActivity {
         pass = findViewById(R.id.pass);
         compss = findViewById(R.id.compss);
 
+
         Mydatabase db = new Mydatabase(MainActivity2up.this);
 
 //        pass.getText().toString();
 //        compss.getText().toString();
+
 
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
