@@ -153,7 +153,8 @@ public class Homepage extends AppCompatActivity {
 
                             close.setOnClickListener(new View.OnClickListener() {
                                 @Override
-                                public void onClick(View v) {
+                                public void onClick(View v)
+                                {
                                     dialog.dismiss();
                                 }
                             });
