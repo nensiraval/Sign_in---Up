@@ -19,6 +19,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class Contact extends AppCompatActivity
 {
+
+    // new file
     Button save,cl;
     TextInputEditText fname, mael, lname,phone;
     @Override
