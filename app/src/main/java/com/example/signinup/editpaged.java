@@ -27,7 +27,7 @@ public class editpaged extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editpaged);
 
-        ename = findViewById(R.id.ename);
+       ename = findViewById(R.id.ename);
         enumber = findViewById(R.id.enumber);
         esave = findViewById(R.id.esave);
         edelete = findViewById(R.id.edelete);
